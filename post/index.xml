@@ -6,10 +6,19 @@
     <description>Recent content in Posts on ZengXu&#39;s BLOG</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 03 Oct 2019 23:07:26 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 04 Oct 2019 02:01:57 +0800</lastBuildDate>
     
 	<atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Hugo Test</title>
+      <link>http://localhost:1313/post/hugo-test/</link>
+      <pubDate>Fri, 04 Oct 2019 02:01:57 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/hugo-test/</guid>
+      <description>摘要摘要摘要</description>
+    </item>
     
     <item>
       <title>First Even</title>
@@ -20,15 +29,6 @@
       <description>math
 $2^k -1 = \sum_{i=0}^{k-1}2^i$
 $2^k\&amp;amp;\sum_{i=0}^{k-1}2^i=0$</description>
-    </item>
-    
-    <item>
-      <title>配置动态更新</title>
-      <link>http://localhost:1313/post/10%E6%9C%8831%E6%97%A5/</link>
-      <pubDate>Wed, 02 Oct 2019 17:25:20 +0800</pubDate>
-      
-      <guid>http://localhost:1313/post/10%E6%9C%8831%E6%97%A5/</guid>
-      <description>更新流程 应用 Spring 容器中的什么对象会更新 所有注解了 @ConfigurationProperties 的 Bean 都会自动刷新，直接或间接引用了 @ConfigurationProperties Bean 的对象会受更新影响，发生在图中步骤 5 所有注解了 @RefreshScope 的 Bean 都</description>
     </item>
     
     <item>

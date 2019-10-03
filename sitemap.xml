@@ -2,29 +2,29 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://localhost:1313/post/first-even/</loc>
-    <lastmod>2019-10-03T23:07:26+08:00</lastmod>
+    <loc>http://localhost:1313/post/hugo-test/</loc>
+    <lastmod>2019-10-04T02:01:57+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://localhost:1313/post/</loc>
-    <lastmod>2019-10-03T23:07:26+08:00</lastmod>
+    <lastmod>2019-10-04T02:01:57+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2019-10-03T23:07:26+08:00</lastmod>
+    <lastmod>2019-10-04T02:01:57+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/10%E6%9C%8831%E6%97%A5/</loc>
-    <lastmod>2019-10-02T17:25:20+08:00</lastmod>
+    <loc>http://localhost:1313/post/first-even/</loc>
+    <lastmod>2019-10-03T23:07:26+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>

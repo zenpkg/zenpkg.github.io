@@ -30,21 +30,14 @@
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/10%E6%9C%8830%E6%97%A5/</loc>
+    <loc>http://localhost:1313/post/config-center-comparasion/</loc>
     <lastmod>2019-10-02T17:25:18+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/10%E6%9C%8829%E6%97%A5/</loc>
-    <lastmod>2019-10-02T17:25:13+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://localhost:1313/post/10%E6%9C%8828%E6%97%A5/</loc>
+    <loc>http://localhost:1313/post/tomcat-log/</loc>
     <lastmod>2019-10-02T17:25:11+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

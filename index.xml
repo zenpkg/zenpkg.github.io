@@ -33,28 +33,19 @@ $2^k\&amp;amp;\sum_{i=0}^{k-1}2^i=0$</description>
     
     <item>
       <title>主流配置中心对比</title>
-      <link>http://localhost:1313/post/10%E6%9C%8830%E6%97%A5/</link>
+      <link>http://localhost:1313/post/config-center-comparasion/</link>
       <pubDate>Wed, 02 Oct 2019 17:25:18 +0800</pubDate>
       
-      <guid>http://localhost:1313/post/10%E6%9C%8830%E6%97%A5/</guid>
+      <guid>http://localhost:1313/post/config-center-comparasion/</guid>
       <description>与主流开源配置中心比较 目前能找到的主流开源配置中心主要有 淘宝 diamond, 支付宝 Qiqi Liao 开源的 disconf ，携程 Apollo，Spring Git，随行付 config keeper</description>
     </item>
     
     <item>
-      <title>配置中心</title>
-      <link>http://localhost:1313/post/10%E6%9C%8829%E6%97%A5/</link>
-      <pubDate>Wed, 02 Oct 2019 17:25:13 +0800</pubDate>
-      
-      <guid>http://localhost:1313/post/10%E6%9C%8829%E6%97%A5/</guid>
-      <description>接入指南 Maven 依赖 考虑到目前仍有迭代，建议直接引入依赖，后续会提供 zeus_client 的集成版本。 由于没有去除原先的 git 配置中心客户端包，它缺省从 localhost:8888 拉取配置，为避免</description>
-    </item>
-    
-    <item>
       <title>Servlet 日志</title>
-      <link>http://localhost:1313/post/10%E6%9C%8828%E6%97%A5/</link>
+      <link>http://localhost:1313/post/tomcat-log/</link>
       <pubDate>Wed, 02 Oct 2019 17:25:11 +0800</pubDate>
       
-      <guid>http://localhost:1313/post/10%E6%9C%8828%E6%97%A5/</guid>
+      <guid>http://localhost:1313/post/tomcat-log/</guid>
       <description>Tomcat 日志处理 access log 通过 SpringBoot 配置，可以直接配置 tomcat access log，建议使用如下配置 1 2 3 4 5 6 7 8 9 10 11 12 server: tomcat: accesslog: enabled: true # 打开 access 日志 pattern: &amp;#39;%t %I %a %r %s, bytes sent: %b, take: %D us, %X&amp;#39; prefix:</description>
     </item>
     

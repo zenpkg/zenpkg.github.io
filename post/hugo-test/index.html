@@ -50,7 +50,7 @@
 
 <meta itemprop="datePublished" content="2019-10-04T02:01:57&#43;08:00" />
 <meta itemprop="dateModified" content="2019-10-04T02:01:57&#43;08:00" />
-<meta itemprop="wordCount" content="686">
+<meta itemprop="wordCount" content="245">
 
 
 
@@ -134,19 +134,11 @@
   <div class="post-toc-content always-active">
     <nav id="TableOfContents">
 <ul>
-<li>
-<ul>
-<li><a href="#examples">Examples</a>
-<ul>
 <li><a href="#code">Code</a></li>
 <li><a href="#math">Math</a></li>
-<li><a href="#diagrams">Diagrams</a></li>
+<li><a href="#shortcodes">shortcodes</a></li>
 <li><a href="#todo-lists">Todo lists</a></li>
 <li><a href="#tables">Tables</a></li>
-<li><a href="#asides">Asides</a></li>
-<li><a href="#did-you-find-this-page-helpful-consider-sharing-it">Did you find this page helpful? Consider sharing it 🙌</a></li>
-</ul></li>
-</ul></li>
 </ul>
 </nav>
   </div>
@@ -154,17 +146,15 @@
     <div class="post-content">
       
 
+<p>我很喜欢 <img src="/img/terrace_house_chunhua.jpg" alt="" /></p>
+
 <p>Academic is designed to give technical content creators a seamless experience. You can focus on the content and Academic handles the rest.</p>
 
 <p><strong>Highlight your code snippets, take notes on math classes, and draw diagrams from textual representation.</strong></p>
 
 <p>On this page, you&rsquo;ll find some examples of the types of technical content that can be rendered with Academic.</p>
 
-<h2 id="examples">Examples</h2>
-
-<h3 id="code">Code</h3>
-
-<p>Academic supports a Markdown extension for highlighting code syntax. You can enable this feature by toggling the <code>highlight</code> option in your <code>config/_default/params.toml</code> file.</p>
+<h1 id="code">Code</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><span class="lnt">1
@@ -194,11 +184,11 @@ data.head()
 <span class="n">data</span><span class="o">.</span><span class="n">head</span><span class="p">()</span></code></pre></td></tr></table>
 </div>
 </div>
-<h3 id="math">Math</h3>
+<h1 id="math">Math</h1>
 
-<p>Academic supports a Markdown extension for $\LaTeX$ math. You can enable this feature by toggling the <code>math</code> option in your <code>config/_default/params.toml</code> file and adding <code>markup: mmark</code> to your page front matter.</p>
+<p>Academic supports a Markdown extension for $\LaTeX$ math.</p>
 
-<p>To render <em>inline</em> or <em>block</em> math, wrap your LaTeX math with <code>$$...$$</code>.</p>
+<p>To render <em>inline</em> or <em>block</em> math, wrap your LaTeX math with <code>$...$</code>.</p>
 
 <p>Example <strong>math block</strong>:</p>
 <div class="highlight"><div class="chroma">
@@ -206,192 +196,50 @@ data.head()
 <pre class="chroma"><code class="language-tex" data-lang="tex"><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
-</span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-tex" data-lang="tex"><span class="sb">$$</span><span class="nv">\gamma</span><span class="nb">_{n} </span><span class="o">=</span><span class="nb"> </span><span class="nv">\frac</span><span class="nb">{ 
-</span><span class="nb"></span><span class="nv">\left</span><span class="nb"> | </span><span class="nv">\left</span><span class="nb"> </span><span class="o">(</span><span class="nv">\mathbf</span><span class="nb"> x_{n} </span><span class="o">-</span><span class="nb"> </span><span class="nv">\mathbf</span><span class="nb"> x_{n</span><span class="o">-</span><span class="m">1</span><span class="nb">} </span><span class="nv">\right</span><span class="nb"> </span><span class="o">)</span><span class="nb">^T 
-</span><span class="nb"></span><span class="nv">\left</span><span class="nb"> </span><span class="o">[</span><span class="nv">\nabla</span><span class="nb"> F </span><span class="o">(</span><span class="nv">\mathbf</span><span class="nb"> x_{n}</span><span class="o">)</span><span class="nb"> </span><span class="o">-</span><span class="nb"> </span><span class="nv">\nabla</span><span class="nb"> F </span><span class="o">(</span><span class="nv">\mathbf</span><span class="nb"> x_{n</span><span class="o">-</span><span class="m">1</span><span class="nb">}</span><span class="o">)</span><span class="nb"> </span><span class="nv">\right</span><span class="nb"> </span><span class="o">]</span><span class="nb"> </span><span class="nv">\right</span><span class="nb"> |}
-</span><span class="nb">{</span><span class="nv">\left</span><span class="nb"> </span><span class="nv">\|\nabla</span><span class="nb"> F</span><span class="o">(</span><span class="nv">\mathbf</span><span class="nb">{x}_{n}</span><span class="o">)</span><span class="nb"> </span><span class="o">-</span><span class="nb"> </span><span class="nv">\nabla</span><span class="nb"> F</span><span class="o">(</span><span class="nv">\mathbf</span><span class="nb">{x}_{n</span><span class="o">-</span><span class="m">1</span><span class="nb">}</span><span class="o">)</span><span class="nb"> </span><span class="nv">\right</span><span class="nb"> </span><span class="nv">\|</span><span class="nb">^</span><span class="m">2</span><span class="nb">}</span><span class="s">$$</span></code></pre></td></tr></table>
+<pre class="chroma"><code class="language-tex" data-lang="tex">2<span class="nb">^</span>k -1 = <span class="k">\sum</span><span class="nb">_{</span>i=0<span class="nb">}^{</span>k-1<span class="nb">}</span>2<span class="nb">^</span>i
+
+2<span class="nb">^</span>k<span class="k">\\</span><span class="nb">&amp;</span><span class="k">\\</span>sum<span class="nb">_{</span>i=0<span class="nb">}^{</span>k-1<span class="nb">}</span>2<span class="nb">^</span>i=0</code></pre></td></tr></table>
 </div>
 </div>
 <p>renders as</p>
 
-<p>$\gamma<em>{n} = \frac{ \left | \left (\mathbf x</em>{n} - \mathbf x<em>{n-1} \right )^T \left [\nabla F (\mathbf x</em>{n}) - \nabla F (\mathbf x<em>{n-1}) \right ] \right |}{\left |\nabla F(\mathbf{x}</em>{n}) - \nabla F(\mathbf{x}_{n-1}) \right |^2}$</p>
+<p>$2^k -1 = \sum_{i=0}^{k-1}2^i$</p>
 
-<p>Example <strong>inline math</strong> <code>$\left \|\nabla F(\mathbf{x}_{n}) - \nabla F(\mathbf{x}_{n-1}) \right \|^2$</code> renders as $$\left |\nabla F(\mathbf{x}<em>{n}) - \nabla F(\mathbf{x}</em>{n-1}) \right |^2$$ .</p>
+<p>$2^k\&amp;\sum_{i=0}^{k-1}2^i=0$</p>
 
-<p>Example <strong>multi-line math</strong> using the <code>\\</code> math linebreak:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-tex" data-lang="tex"><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-tex" data-lang="tex"><span class="sb">$$</span><span class="nb">f</span><span class="o">(</span><span class="nb">k;p_</span><span class="m">0</span><span class="nb">^</span><span class="o">*)</span><span class="nb"> </span><span class="o">=</span><span class="nb"> </span><span class="nv">\begin</span><span class="nb">{cases} p_</span><span class="m">0</span><span class="nb">^</span><span class="o">*</span><span class="nb"> &amp; </span><span class="nv">\text</span><span class="nb">{if }k</span><span class="o">=</span><span class="m">1</span><span class="nb">, </span><span class="nv">\\</span><span class="nb">
-</span><span class="nb"></span><span class="m">1</span><span class="o">-</span><span class="nb">p_</span><span class="m">0</span><span class="nb">^</span><span class="o">*</span><span class="nb"> &amp; </span><span class="nv">\text</span><span class="nb"> {if }k</span><span class="o">=</span><span class="m">0</span><span class="nb">.</span><span class="nv">\end</span><span class="nb">{cases}</span><span class="s">$$</span></code></pre></td></tr></table>
-</div>
-</div>
-<p>renders as</p>
+<h1 id="shortcodes">shortcodes</h1>
 
-<p>$$f(k;p_0^<em>) = \begin{cases} p_0^</em> &amp; \text{if }k=1, <br />
-1-p_0^* &amp; \text {if }k=0.\end{cases}$$</p>
+<div class="admonition note"><p class="admonition-title">I&#39;m title!</p>
+  
+biu biu biu.
 
-<h3 id="diagrams">Diagrams</h3>
+<details class="admonition note"><summary class="admonition-title">note</summary>
+  <p>biu biu biu.</p>
 
-<p>Academic supports a Markdown extension for diagrams. You can enable this feature by toggling the <code>diagram</code> option in your <code>config/_default/params.toml</code> file or by adding <code>diagram: true</code> to your page front matter.</p>
+</details>
 
-<p>An example <strong>flowchart</strong>:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">```mermaid
-graph TD;
-  A--&gt;B;
-  A--&gt;C;
-  B--&gt;D;
-  C--&gt;D;
-```</pre></td></tr></table>
+<div class="admonition example">
+  <p>Without title.</p>
+
 </div>
+
+<p></div></p>
+
+<div class="admonition warning">
+  
+zeng: 你想要看什么？
+
 </div>
-<p>renders as</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-mermaid" data-lang="mermaid"><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-mermaid" data-lang="mermaid">graph TD;
-  A--&gt;B;
-  A--&gt;C;
-  B--&gt;D;
-  C--&gt;D;</code></pre></td></tr></table>
+
+<div class="admonition xu">
+  
+xu: 林志玲。
+
 </div>
-</div>
-<p>An example <strong>sequence diagram</strong>:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">```mermaid
-sequenceDiagram
-  participant Alice
-  participant Bob
-  Alice-&gt;John: Hello John, how are you?
-  loop Healthcheck
-      John-&gt;John: Fight against hypochondria
-  end
-  Note right of John: Rational thoughts &lt;br/&gt;prevail...
-  John--&gt;Alice: Great!
-  John-&gt;Bob: How about you?
-  Bob--&gt;John: Jolly good!
-```</pre></td></tr></table>
-</div>
-</div>
-<p>renders as</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-mermaid" data-lang="mermaid"><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-mermaid" data-lang="mermaid">sequenceDiagram
-  participant Alice
-  participant Bob
-  Alice-&gt;John: Hello John, how are you?
-  loop Healthcheck
-      John-&gt;John: Fight against hypochondria
-  end
-  Note right of John: Rational thoughts &lt;br/&gt;prevail...
-  John--&gt;Alice: Great!
-  John-&gt;Bob: How about you?
-  Bob--&gt;John: Jolly good!</code></pre></td></tr></table>
-</div>
-</div>
-<p>An example <strong>Gantt diagram</strong>:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">```
-gantt
-  dateFormat  YYYY-MM-DD
-  section Section
-  A task           :a1, 2014-01-01, 30d
-  Another task     :after a1  , 20d
-  section Another
-  Task in sec      :2014-01-12  , 12d
-  another task      : 24d
-```</pre></td></tr></table>
-</div>
-</div>
-<p>renders as</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">gantt
-  dateFormat  YYYY-MM-DD
-  section Section
-  A task           :a1, 2014-01-01, 30d
-  Another task     :after a1  , 20d
-  section Another
-  Task in sec      :2014-01-12  , 12d
-  another task      : 24d</pre></td></tr></table>
-</div>
-</div>
-<h3 id="todo-lists">Todo lists</h3>
+
+<h1 id="todo-lists">Todo lists</h1>
 
 <p>You can even write your todo lists in Academic too:</p>
 <div class="highlight"><div class="chroma">
@@ -414,7 +262,7 @@ gantt
 <li><label><input type="checkbox" disabled class="task-list-item"> Do something else</label></li>
 </ul>
 
-<h3 id="tables">Tables</h3>
+<h1 id="tables">Tables</h1>
 
 <p>Represent your data in tables:</p>
 <div class="highlight"><div class="chroma">
@@ -453,23 +301,6 @@ gantt
 </tr>
 </tbody>
 </table>
-
-<h3 id="asides">Asides</h3>
-
-<p>Academic supports a Markdown extension for asides, also referred to as <em>notices</em> or <em>hints</em>. By prefixing a paragraph with <code>A&gt;</code>, it will render as an aside. You can enable this feature by adding <code>markup: mmark</code> to your page front matter, or alternatively using the <a href="https://sourcethemes.com/academic/docs/writing-markdown-latex/#alerts"><em>Alert</em> shortcode</a>.</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-markdown" data-lang="markdown"><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-markdown" data-lang="markdown">A&gt; A Markdown aside is useful for displaying notices, hints, or definitions to your readers.</code></pre></td></tr></table>
-</div>
-</div>
-<p>renders as</p>
-
-<p>A&gt; A Markdown aside is useful for displaying notices, hints, or definitions to your readers.</p>
-
-<h3 id="did-you-find-this-page-helpful-consider-sharing-it">Did you find this page helpful? Consider sharing it 🙌</h3>
 
     </div>
 

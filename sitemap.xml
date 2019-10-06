@@ -2,21 +2,28 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://phosae.github.io/post/first-even/</loc>
-    <lastmod>2019-10-03T23:07:26+08:00</lastmod>
+    <loc>https://phosae.github.io/post/hugo-test/</loc>
+    <lastmod>2019-10-04T02:01:57+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://phosae.github.io/post/</loc>
-    <lastmod>2019-10-03T23:07:26+08:00</lastmod>
+    <lastmod>2019-10-04T02:01:57+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://phosae.github.io/</loc>
+    <lastmod>2019-10-04T02:01:57+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://phosae.github.io/post/first-even/</loc>
     <lastmod>2019-10-03T23:07:26+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -65,14 +72,14 @@
   </url>
   
   <url>
-    <loc>https://phosae.github.io/tags/shortcodes/</loc>
+    <loc>https://phosae.github.io/categories/shortcodes/</loc>
     <lastmod>2018-02-01T18:01:23+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://phosae.github.io/categories/shortcodes/</loc>
+    <loc>https://phosae.github.io/tags/shortcodes/</loc>
     <lastmod>2018-02-01T18:01:23+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

@@ -1,41 +1,41 @@
-<?xml-stylesheet type="text/xsl" href="https://phosae.github.io/sitemap.xsl"?>
+<?xml-stylesheet type="text/xsl" href="https://www.zeng.dev/sitemap.xsl"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://phosae.github.io/post/</loc>
+    <loc>https://www.zeng.dev/post/</loc>
     <lastmod>2019-10-06T22:45:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://phosae.github.io/</loc>
+    <loc>https://www.zeng.dev/</loc>
     <lastmod>2019-10-06T22:45:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://phosae.github.io/post/%E7%A7%8B%E6%97%A5/</loc>
+    <loc>https://www.zeng.dev/post/%E7%A7%8B%E6%97%A5/</loc>
     <lastmod>2019-10-06T22:45:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://phosae.github.io/about/</loc>
+    <loc>https://www.zeng.dev/about/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://phosae.github.io/categories/</loc>
+    <loc>https://www.zeng.dev/categories/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://phosae.github.io/tags/</loc>
+    <loc>https://www.zeng.dev/tags/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>

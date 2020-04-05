@@ -12,12 +12,12 @@
     
     
     <item>
-      <title>搭建树莓派集群</title>
-      <link>https://www.zeng.dev/post/raspberry-pi-cluster/</link>
+      <title>搭建树莓派 k8s 集群</title>
+      <link>https://www.zeng.dev/post/20200405-raspberry-pi-cluster/</link>
       <pubDate>Sun, 05 Apr 2020 10:00:00 +0800</pubDate>
       
-      <guid>https://www.zeng.dev/post/raspberry-pi-cluster/</guid>
-      <description>最近打算系统学习 k8s，试用了阿里云 k8s 服务，使用非托管版需创建 6 台 ECS，使用托管版需创建 3 台 ECS，配套的 NAT 网关每天要花 12 块，太贵了！同时</description>
+      <guid>https://www.zeng.dev/post/20200405-raspberry-pi-cluster/</guid>
+      <description>自己动手，丰衣足食，利用开发板搭建本地 k8s 集群</description>
     </item>
     
     <item>

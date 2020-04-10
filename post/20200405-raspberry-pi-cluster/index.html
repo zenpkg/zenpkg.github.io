@@ -43,12 +43,12 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.zeng.dev/post/20200405-raspberry-pi-cluster/" />
 <meta property="article:published_time" content="2020-04-05T10:00:00+08:00" />
-<meta property="article:modified_time" content="2020-04-05T15:39:00+00:00" />
+<meta property="article:modified_time" content="2020-04-07T10:02:00+00:00" />
 <meta itemprop="name" content="搭建树莓派 k8s 集群">
 <meta itemprop="description" content="自己动手，丰衣足食，利用开发板搭建本地 k8s 集群">
 <meta itemprop="datePublished" content="2020-04-05T10:00:00&#43;08:00" />
-<meta itemprop="dateModified" content="2020-04-05T15:39:00&#43;00:00" />
-<meta itemprop="wordCount" content="1138">
+<meta itemprop="dateModified" content="2020-04-07T10:02:00&#43;00:00" />
+<meta itemprop="wordCount" content="1310">
 
 
 
@@ -140,7 +140,7 @@
         <li><a href="#heading3">测试网络连通</a></li>
       </ul>
     </li>
-    <li><a href="#--">总结 & 未来计划</a></li>
+    <li><a href="#410---x86--up-board">4-10 更新, 加入 x86 开发板 Up Board</a></li>
   </ul>
 </nav>
   </div>
@@ -199,18 +199,18 @@
 <h2 id="ubuntu-">Ubuntu 系统烧录</h2>
 <p>下载 <a href="https://ubuntu.com/download/raspberry-pi">Ubuntu Server 18.04 LTS</a> Pi image 64-bit 版，安装并使用 <a href="https://www.balena.io/etcher/">Etcher</a> 进行系统烧录。注意千万不用使用树莓派官方的 <em>Raspberry Pi Imager</em>, 那玩意在 TF 卡格式化方面是噩梦，且貌似只支持烧录 Raspbian 系统。</p>
 <p>选择好 img 镜像和对应 SD 卡之后，点击 Flash 开始烧录。
-<img src="/img/2020-04/etcher.jpg" alt="drawing" width="50%"/>
+<img src="/img/2020-04/etcher.jpg" alt="drawing" width="500px"/>
 打开烧录完成后的 TF 卡，在根目录中新建一个空白 ssh 文件，以便 Ubuntu 在启动自动开启远程登陆，这样一来就不需要连接显示器之类的外设操作开发板。
-<img src="/img/2020-04/ubuntu-ssh.jpg" width="50%"/></p>
+<img src="/img/2020-04/ubuntu-ssh.jpg" width="500px"/></p>
 <h2 id="heading1">启动并配置网络</h2>
 <p>网络配置参考了 <a href="https://www.ancii.com/asnvx7pqp/">交换机组建通信子网并通过macOS共享网络</a>，即 Mac 通过外置网卡充当交换机上集群的路由器，让每一块板子都能直接联网。</p>
-<img src="/img/2020-04/cluster-hardware.JPG" width="60%"/>
+<img src="/img/2020-04/cluster-hardware.JPG" width="500px"/>
 <div class='align-center'>
 <p>注: 左边 4 根为开发板网线，最右为 Mac 网线</p>
 </div>
 <h3 id="mac-">Mac 网络配置</h3>
 <p>插入 type-c 网卡之后，安装好网卡驱动（重要！！!)，然后打开系统偏好设置 -&gt; 网络，看到 AX8817&hellip;thernet 已出现在列表。注意要保证 Wi-Fi 网卡在其之前（通过设定服务顺序调整），因为 Mac 操作系统会选择第一张网卡发起对外网络连接，如果连接交换机的网卡在第一栏，设备将无法上网。</p>
-<img src="/img/2020-04/mac-net-config.jpg" width="50%">
+<img src="/img/2020-04/mac-net-config.jpg" width="500px">
 <p>在这里我们设置 Mac 在有线网卡侧的 IP 为 192.168.2.10，并把它作为路由器。</p>
 <h3 id="heading2">开发板网络配置</h3>
 <p>通过 arp -a 获取开发板硬件地址并使用 ssh 操作进入开发板系统 (默认用户名名字均为 ubuntu)，依次按照如下指令依次操作所有开发板</p>
@@ -289,9 +289,72 @@ ubuntu@ubuntu:~$
 </div>
 </div><h3 id="heading3">测试网络连通</h3>
 <p>完成上述步骤后，在任意开发板中或者 Mac 中进行 ping 操作，确认所有主机 192.168.2.2, 192.168.2.3, 192.168.2.4, 192.168.2.5, 192.168.2.10 互通。</p>
-<h2 id="--">总结 &amp; 未来计划</h2>
-<p>这里使用 3 块树莓派 3 Model B+ 作为 control panel 集群，使用 1 块树莓派 4 Model B (2G) 作为 worker 节点，未来会再加入 3 块开发板。开发板选择上，会混搭 x86 和 arm，看看 k8s 的跨平台能力。</p>
+<h2 id="410---x86--up-board">4-10 更新, 加入 x86 开发板 Up Board</h2>
+<p>型号 4 cores @ 1.44 GHz, 4 GB RAM(DDR3/1600MHZ), 2 GbE, 32 GB eMMc</p>
+<p>安装系统 Ubuntu Desktop 18.04 LTS</p>
+<p>Ubuntu Desktop 网络配置和树莓派 Ubuntu Server 不一样，它使用的是 network-manager, 先通过 <strong>ip a</strong> 获取网卡名 (这里是 enp1s0，很多是 eth0)，在  /etc/network/interfaces 文件设置静态 IP</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-text" data-lang="text">auto lo
+iface lo inet loopback
 
+auto enp1s0
+  iface enp1s0 inet static
+  address 192.168.2.7
+  netmask 255.255.255.0
+  gateway 192.168.2.10
+</code></pre></td></tr></table>
+</div>
+</div><p>重启 network-manager</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-text" data-lang="text">$ sudo service network-manager restart
+$ ps aux | grep -i -E &#34;(networkmanager|nm)&#34;
+root      2175  0.0  0.5 502676 18436 ?  Ssl  21:23   0:00 /usr/sbin/NetworkManager --no-daemon
+</code></pre></td></tr></table>
+</div>
+</div><p>Ubuntu Desktop 使用 systemd-resolved 解析 DNS，打开 /etc/systemd/resolved.conf，加入 DNS 服务地址</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-text" data-lang="text">[Resolve]
+DNS=8.8.8.8 114.114.114.114 192.168.2.10
+FallbackDNS=8.8.4.4
+</code></pre></td></tr></table>
+</div>
+</div><p>重启服务</p>
+<pre><code>$ systemctl restart systemd-resolved
+</code></pre><p>最后，切记链接文件</p>
+<pre><code>$ sudo ln -s /run/systemd/resolve/resolv.conf /etc/resolv.conf
+</code></pre><p>测试 DNS 解析</p>
+<pre><code>$ nslookup google.com nslookup google.com
+Server:		8.8.8.8
+Address:	8.8.8.8#53
+
+Name:	google.com
+Address: 93.46.8.90
+Name:	google.com
+Address: 59.24.3.174
+</code></pre>
     </div>
 
     <div class="post-copyright">
@@ -302,7 +365,7 @@ ubuntu@ubuntu:~$
   <p class="copyright-item">
     <span class="item-title">LastMod</span>
     <span class="item-content">
-        2020-04-05 15:39
+        2020-04-07 10:02
         
     </span>
   </p>

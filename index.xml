@@ -6,10 +6,19 @@
     <description>Recent content on ZengXu&#39;s BLOG</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 05 Apr 2020 10:00:00 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 15 Apr 2020 21:40:48 +0800</lastBuildDate>
     
 	<atom:link href="https://www.zeng.dev/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>containerd 手动导入镜像</title>
+      <link>https://www.zeng.dev/post/20200415-containerd-image-import-1/</link>
+      <pubDate>Wed, 15 Apr 2020 21:40:48 +0800</pubDate>
+      
+      <guid>https://www.zeng.dev/post/20200415-containerd-image-import-1/</guid>
+      <description>众所周知，k8s.gcr.io 长期被墙，导致 k8s 的基础容器 pause 经常无法获取。k8s docker 环境大家一般使用代理服拉取，再通过 docker tag 的方式解决问题 1 2 docker pull</description>
+    </item>
     
     <item>
       <title>搭建树莓派 k8s 集群</title>

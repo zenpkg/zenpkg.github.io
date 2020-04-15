@@ -2,8 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://www.zeng.dev/tags/kubernetes/</loc>
-    <lastmod>2020-04-15T21:30:00+00:00</lastmod>
+    <loc>https://www.zeng.dev/tags/containerd/</loc>
+    <lastmod>2020-04-15T21:40:48+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.zeng.dev/post/20200415-containerd-image-import-1/</loc>
+    <lastmod>2020-04-15T21:40:48+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.zeng.dev/tags/k8s/</loc>
+    <lastmod>2020-04-15T21:40:48+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -24,6 +38,13 @@
   
   <url>
     <loc>https://www.zeng.dev/</loc>
+    <lastmod>2020-04-15T21:30:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.zeng.dev/tags/kubernetes/</loc>
     <lastmod>2020-04-15T21:30:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

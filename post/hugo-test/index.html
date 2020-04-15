@@ -23,10 +23,10 @@
 
 
 
-<meta name="generator" content="Hugo 0.58.3 with theme even" />
+<meta name="generator" content="Hugo 0.60.1 with theme even" />
 
 
-<link rel="canonical" href="https://phosae.github.io/post/hugo-test/" />
+<link rel="canonical" href="https://www.zeng.dev/post/hugo-test/" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -34,28 +34,25 @@
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 
 
-<link href="/dist/even.c98c31e9.min.css" rel="stylesheet">
+<link href="/dist/even.3eede659.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
 <meta property="og:title" content="Hugo Test" />
 <meta property="og:description" content="摘要摘要摘要" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://phosae.github.io/post/hugo-test/" />
-<meta property="article:published_time" content="2019-10-04T02:01:57+08:00" />
-<meta property="article:modified_time" content="2019-10-04T02:01:57+08:00" />
+<meta property="og:url" content="https://www.zeng.dev/post/hugo-test/" />
+<meta property="article:published_time" content="2019-10-01T02:01:57+08:00" />
+<meta property="article:modified_time" content="2019-10-06T22:45:00+08:00" />
 <meta itemprop="name" content="Hugo Test">
 <meta itemprop="description" content="摘要摘要摘要">
-
-
-<meta itemprop="datePublished" content="2019-10-04T02:01:57&#43;08:00" />
-<meta itemprop="dateModified" content="2019-10-04T02:01:57&#43;08:00" />
-<meta itemprop="wordCount" content="366">
+<meta itemprop="datePublished" content="2019-10-01T02:01:57&#43;08:00" />
+<meta itemprop="dateModified" content="2019-10-06T22:45:00&#43;08:00" />
+<meta itemprop="wordCount" content="335">
 
 
 
-<meta itemprop="keywords" content="" />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Hugo Test"/>
 <meta name="twitter:description" content="摘要摘要摘要"/>
 
@@ -123,7 +120,7 @@
       <h1 class="post-title">Hugo Test</h1>
 
       <div class="post-meta">
-        <span class="post-time"> 2019-10-04 02:01 </span>
+        <span class="post-time"> 2019-10-01 02:01 </span>
         
         
       </div>
@@ -133,155 +130,93 @@
   <h2 class="post-toc-title">Contents</h2>
   <div class="post-toc-content">
     <nav id="TableOfContents">
-<ul>
-<li><a href="#基本操作">基本操作</a>
-<ul>
-<li><a href="#code">Code</a></li>
-<li><a href="#math">Math</a></li>
-<li><a href="#admonition">admonition</a></li>
-<li><a href="#todo-lists">Todo lists</a></li>
-<li><a href="#tables">Tables</a></li>
-</ul></li>
-<li><a href="#charts">Charts</a></li>
-</ul>
+  <ul>
+    <li><a href="#code">Code</a></li>
+    <li><a href="#math">Math</a></li>
+    <li><a href="#admonition">admonition</a></li>
+    <li><a href="#todo-lists">Todo lists</a></li>
+    <li><a href="#tables">Tables</a></li>
+  </ul>
 </nav>
   </div>
 </div>
     <div class="post-content">
-      
-
-<h1 id="基本操作">基本操作</h1>
-
-<p>我很喜欢 <img src="/img/terrace_house_chunhua.jpg" alt="" />
-[大部分来自even 文档]<a href="https://github.com/olOwOlo/hugo-theme-even">https://github.com/olOwOlo/hugo-theme-even</a></p>
-
+      <h1 id="heading">基本操作</h1>
+<p>我很喜欢 <img src="/img/terrace_house_chunhua.jpg" alt="">
+[大部分来自even 文档]https://github.com/olOwOlo/hugo-theme-even</p>
 <h2 id="code">Code</h2>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">```python
+<pre><code>```python
 import pandas as pd
-data = pd.read_csv(&#34;data.csv&#34;)
+data = pd.read_csv(&quot;data.csv&quot;)
 data.head()
-```</pre></td></tr></table>
-</div>
-</div>
+```
+</code></pre>
 <p>renders as</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
-<span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&#34;data.csv&#34;</span><span class="p">)</span>
-<span class="n">data</span><span class="o">.</span><span class="n">head</span><span class="p">()</span></code></pre></td></tr></table>
+<span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="sa"></span><span class="s2">&#34;</span><span class="s2">data.csv</span><span class="s2">&#34;</span><span class="p">)</span>
+<span class="n">data</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="p">)</span>
+</code></pre></td></tr></table>
 </div>
-</div>
-<h2 id="math">Math</h2>
-
+</div><h2 id="math">Math</h2>
 <p>Academic supports a Markdown extension for $\LaTeX$ math.</p>
-
 <p>To render <em>inline</em> or <em>block</em> math, wrap your LaTeX math with <code>$...$</code>.</p>
-
 <p>Example <strong>math block</strong>:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-tex" data-lang="tex"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-tex" data-lang="tex">2<span class="nb">^</span>k -1 = <span class="k">\sum</span><span class="nb">_{</span>i=0<span class="nb">}^{</span>k-1<span class="nb">}</span>2<span class="nb">^</span>i
+<pre class="chroma"><code class="language-tex" data-lang="tex">2<span class="nb">^</span>k -1 = <span class="k">\sum</span><span class="nb">_</span><span class="nb">{</span>i=0<span class="nb">}</span><span class="nb">^</span><span class="nb">{</span>k-1<span class="nb">}</span>2<span class="nb">^</span>i
 
-2<span class="nb">^</span>k<span class="k">\\</span><span class="nb">&amp;</span><span class="k">\\</span>sum<span class="nb">_{</span>i=0<span class="nb">}^{</span>k-1<span class="nb">}</span>2<span class="nb">^</span>i=0</code></pre></td></tr></table>
+2<span class="nb">^</span>k<span class="k">\\</span><span class="nb">&amp;</span><span class="k">\\</span>sum<span class="nb">_</span><span class="nb">{</span>i=0<span class="nb">}</span><span class="nb">^</span><span class="nb">{</span>k-1<span class="nb">}</span>2<span class="nb">^</span>i=0
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>renders as</p>
-
+</div><p>renders as</p>
 <p>$2^k -1 = \sum_{i=0}^{k-1}2^i$</p>
-
 <p>$2^k\&amp;\sum_{i=0}^{k-1}2^i=0$</p>
-
 <h2 id="admonition">admonition</h2>
-
 <div class="admonition note"><p class="admonition-title">I&#39;m title!</p>
-  
-biu biu biu.
-
+<p>biu biu biu.</p>
 <details class="admonition note"><summary class="admonition-title">note</summary>
   <p>biu biu biu.</p>
-
 </details>
-
 <div class="admonition example">
   <p>Without title.</p>
-
 </div>
-
-<p></div></p>
-
+</div>
 <div class="admonition warning">
-  
-zeng: 你想要看什么？
-
+<p>zeng: 你想要看什么？</p>
 </div>
-
 <div class="admonition ">
-  
-xu: 林志玲。
-
+<p>xu: 林志玲。</p>
 </div>
-
 <h2 id="todo-lists">Todo lists</h2>
-
 <p>You can even write your todo lists in Academic too:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">- [x] Write math example
+<pre><code>- [x] Write math example
 - [x] Write diagram example
-- [ ] Do something else</pre></td></tr></table>
-</div>
-</div>
-<p>renders as</p>
-
-<ul class="task-list">
-<li><label><input type="checkbox" checked disabled class="task-list-item"> Write math example</label></li>
-<li><label><input type="checkbox" checked disabled class="task-list-item"> Write diagram example</label></li>
-<li><label><input type="checkbox" disabled class="task-list-item"> Do something else</label></li>
+- [ ] Do something else
+</code></pre><p>renders as</p>
+<ul>
+<li><input checked="" disabled="" type="checkbox">Write math example</li>
+<li><input checked="" disabled="" type="checkbox">Write diagram example</li>
+<li><input disabled="" type="checkbox">Do something else</li>
 </ul>
-
 <h2 id="tables">Tables</h2>
-
 <p>Represent your data in tables:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">| First Header  | Second Header |
+<pre><code>| First Header  | Second Header |
 | ------------- | ------------- |
 | Content Cell  | Content Cell  |
-| Content Cell  | Content Cell  |</pre></td></tr></table>
-</div>
-</div>
-<p>renders as</p>
-
+| Content Cell  | Content Cell  |
+</code></pre><p>renders as</p>
 <table>
 <thead>
 <tr>
@@ -289,43 +224,20 @@ xu: 林志玲。
 <th>Second Header</th>
 </tr>
 </thead>
-
 <tbody>
 <tr>
 <td>Content Cell</td>
 <td>Content Cell</td>
 </tr>
-
 <tr>
 <td>Content Cell</td>
 <td>Content Cell</td>
 </tr>
 </tbody>
 </table>
-
 <h1 id="charts">Charts</h1>
-
 <p>See more information from <a href="https://github.com/adrai/flowchart.js">https://github.com/adrai/flowchart.js</a>.</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-flowchart" data-lang="flowchart"><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-flowchart" data-lang="flowchart">st=&gt;start: Start|past:&gt;http://www.google.com[blank]
+<pre><code class="language-flowchart" data-lang="flowchart">st=&gt;start: Start|past:&gt;http://www.google.com[blank]
 e=&gt;end: End:&gt;http://www.google.com
 op1=&gt;operation: My Operation|past
 op2=&gt;operation: Stuff|current
@@ -339,42 +251,20 @@ st-&gt;op1(right)-&gt;cond
 cond(yes, right)-&gt;c2
 cond(no)-&gt;sub1(left)-&gt;op1
 c2(yes)-&gt;io-&gt;e
-c2(no)-&gt;op2-&gt;e</code></pre></td></tr></table>
-</div>
-</div>
-<p>see more info from <a href="https://bramp.github.io/js-sequence-diagrams/">https://bramp.github.io/js-sequence-diagrams/</a></p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-sequence" data-lang="sequence"><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-sequence" data-lang="sequence">Andrew-&gt;China: Says Hello
+c2(no)-&gt;op2-&gt;e
+</code></pre><p>see more info from <a href="https://bramp.github.io/js-sequence-diagrams/">https://bramp.github.io/js-sequence-diagrams/</a></p>
+<pre><code class="language-sequence" data-lang="sequence">Andrew-&gt;China: Says Hello
 Note right of China: China thinks\nabout it
 China--&gt;Andrew: How are you?
-Andrew-&gt;&gt;China: I am good thanks!</code></pre></td></tr></table>
-</div>
-</div><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-sequence" data-lang="sequence"><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-sequence" data-lang="sequence">Title: Here is a title
+Andrew-&gt;&gt;China: I am good thanks!
+</code></pre><pre><code class="language-sequence" data-lang="sequence">Title: Here is a title
 A-&gt;B: Normal line
 B--&gt;C: Dashed line
 C-&gt;&gt;D: Open arrow
-D--&gt;&gt;A: Dashed open arrow</code></pre></td></tr></table>
-</div>
-</div>
-<div class="highlight"><div class="chroma">
+D--&gt;&gt;A: Dashed open arrow
+</code></pre><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="hl"><span class="lnt">199
+<pre class="chroma"><code><span class="hl"><span class="lnt">199
 </span></span><span class="lnt">200
 </span><span class="hl"><span class="lnt">201
 </span></span><span class="hl"><span class="lnt">202
@@ -394,6 +284,18 @@ D--&gt;&gt;A: Dashed open arrow</code></pre></td></tr></table>
 </span><span class="p">&lt;/</span><span class="nt">section</span><span class="p">&gt;</span></code></pre></td></tr></table>
 </div>
 </div>
+<h1 id="music">music</h1>
+<p>飞云之下</p>
+  <iframe style="max-width: 100%"
+      class="music163"
+      frameborder="no"
+      border="0"
+      marginwidth="0"
+      marginheight="0"
+      width="330"
+      height="86"
+      src="//music.163.com/outchain/player?type=2&id=554242032&auto=1&height=66">
+    </iframe>
 
     </div>
 
@@ -401,12 +303,12 @@ D--&gt;&gt;A: Dashed open arrow</code></pre></td></tr></table>
 <footer class="post-footer">
       
       <nav class="post-nav">
-        
-        <a class="next" href="/post/first-even/">
-            <span class="next-text nav-default">First Even</span>
-            <span class="next-text nav-mobile">Next</span>
-            <i class="iconfont icon-right"></i>
+        <a class="prev" href="/post/%E7%A7%8B%E6%97%A5/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">里尔克 《秋日》</span>
+            <span class="prev-text nav-mobile">Prev</span>
           </a>
+        
       </nav>
     </footer>
   </article>
@@ -416,7 +318,7 @@ D--&gt;&gt;A: Dashed open arrow</code></pre></td></tr></table>
     <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js" crossorigin="anonymous"></script>
     <script type="text/javascript">
       var gitalk = new Gitalk({
-        id: '2019-10-04 02:01:57 \x2b0800 CST',
+        id: '2019-10-01 02:01:57 \x2b0800 CST',
         title: 'Hugo Test',
         clientID: '6ab3c721bb197ea92f1e',
         clientSecret: '217d38cc1905f60f1d963c555be606ed3e707937',
@@ -439,8 +341,8 @@ D--&gt;&gt;A: Dashed open arrow</code></pre></td></tr></table>
     <footer id="footer" class="footer">
       <div class="social-links">
       <a href="mailto:zenngxu@gmail.com" class="iconfont icon-email" title="email"></a>
-      <a href="http://localhost:1313" class="iconfont icon-github" title="github"></a>
-  <a href="https://phosae.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+      <a href="https://github.com/phosae" class="iconfont icon-github" title="github"></a>
+  <a href="https://www.zeng.dev/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
 </div>
 
 <div class="copyright">
@@ -457,7 +359,8 @@ D--&gt;&gt;A: Dashed open arrow</code></pre></td></tr></table>
 
   <span class="copyright-year">
     &copy; 
-    2019
+    2019 - 
+    2020
     <span class="heart">
       <i class="iconfont icon-heart"></i>
     </span>
@@ -491,7 +394,7 @@ D--&gt;&gt;A: Dashed open arrow</code></pre></td></tr></table>
 var doNotTrack = false;
 if (!doNotTrack) {
 	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-149382924-2', 'auto');
+	ga('create', 'UA-149382924-1', 'auto');
 	ga('set', 'anonymizeIp', true);
 	ga('send', 'pageview');
 }

@@ -43,12 +43,12 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.zeng.dev/post/20200405-raspberry-pi-cluster/" />
 <meta property="article:published_time" content="2020-04-05T10:00:00+08:00" />
-<meta property="article:modified_time" content="2020-04-05T10:00:00+08:00" />
+<meta property="article:modified_time" content="2020-04-15T21:30:00+00:00" />
 <meta itemprop="name" content="搭建树莓派 k8s 集群">
 <meta itemprop="description" content="自己动手，丰衣足食，利用开发板搭建本地 k8s 集群">
 <meta itemprop="datePublished" content="2020-04-05T10:00:00&#43;08:00" />
-<meta itemprop="dateModified" content="2020-04-05T10:00:00&#43;08:00" />
-<meta itemprop="wordCount" content="1377">
+<meta itemprop="dateModified" content="2020-04-15T21:30:00&#43;00:00" />
+<meta itemprop="wordCount" content="1652">
 
 
 
@@ -141,6 +141,7 @@
       </ul>
     </li>
     <li><a href="#410---x86--up-board">4-10 更新, 加入 x86 开发板 Up Board</a></li>
+    <li><a href="#413-odysseyx86-">4-13，加入 ODYSSEY-X86 开发板</a></li>
   </ul>
 </nav>
   </div>
@@ -287,7 +288,8 @@ ubuntu@ubuntu:~$
 </span><span class="w"></span>}<span class="w">
 </span></code></pre></td></tr></table>
 </div>
-</div><h3 id="heading3">测试网络连通</h3>
+</div><p>4 月 15 拾遗: NetworkManager 也可以使用 netplan 更改网络，只需将 <strong>renderer: networkd</strong> 换成 <strong>renderer: NetworkManager</strong> 即可</p>
+<h3 id="heading3">测试网络连通</h3>
 <p>完成上述步骤后，在任意开发板中或者 Mac 中进行 ping 操作，确认所有主机 192.168.2.2, 192.168.2.3, 192.168.2.4, 192.168.2.5, 192.168.2.10 互通。</p>
 <h2 id="410---x86--up-board">4-10 更新, 加入 x86 开发板 Up Board</h2>
 <p>型号 4 cores @ 1.44 GHz, 4 GB RAM(DDR3/1600MHZ), 2 GbE, 32 GB eMMc</p>
@@ -372,7 +374,30 @@ Name:	google.com
 Address: 93.46.8.90
 Name:	google.com
 Address: 59.24.3.174
-</code></pre>
+</code></pre><h2 id="413-odysseyx86-">4-13，加入 ODYSSEY-X86 开发板</h2>
+<p>型号 4 cores @ 1.5-2.5 GHz, 8 GB RAM(LPDDR4), 64 GB eMMc</p>
+<p>配置方式基本同上，不过在网络配置中我更改了默认的网卡名</p>
+<pre><code>network:
+  version: 2
+  renderer: networkd
+  ethernets:
+    eth_lan:
+      dhcp4: no
+      dhcp6: no
+      addresses: [192.168.2.8/24]
+      gateway4: 192.168.2.10
+      nameservers:
+        addresses: [8.8.8.8,114.114.114.114,192.168.2.10]
+      match:
+        macaddress: 00:e0:4c:01:0f:6f
+      set-name: eth_lan
+    enp2s0:
+      dhcp4: true
+      dhcp6: true
+</code></pre><p>目前集群长这样</p>
+<img src="/img/2020-04/pi-cluster-0415.jpg" width="500px"/>
+<p>感慨一下，上回装系统还是 5 年前，那会用 UtraISO 做 Window7 启动盘。这回树莓派用的是 sd 卡烧录系统，很快折腾完事了。面对 Ubuntu x86 时自己犯难了，怎么用 U 盘引导装系统完全没概念，网上也没找到啥教程。后来发现和 Windows 一样的，关键在于主板是否支持 UEFI 引导安装，用 Etcher 往 U 盘刷系统，启动主板时找下显示器键盘鼠标，开机时狂按 F2 或者 F7 进开机选项，选 U 盘装系统即可。</p>
+
     </div>
 
     <div class="post-copyright">
@@ -383,7 +408,7 @@ Address: 59.24.3.174
   <p class="copyright-item">
     <span class="item-title">LastMod</span>
     <span class="item-content">
-        2020-04-05 10:00
+        2020-04-15 21:30
         
     </span>
   </p>

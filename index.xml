@@ -13,10 +13,10 @@
     
     <item>
       <title>containerd 手动导入镜像</title>
-      <link>https://www.zeng.dev/post/20200415-containerd-image-import-1/</link>
+      <link>https://www.zeng.dev/post/20200415-containerd-image-import/</link>
       <pubDate>Wed, 15 Apr 2020 21:40:48 +0800</pubDate>
       
-      <guid>https://www.zeng.dev/post/20200415-containerd-image-import-1/</guid>
+      <guid>https://www.zeng.dev/post/20200415-containerd-image-import/</guid>
       <description>众所周知，k8s.gcr.io 长期被墙，导致 k8s 的基础容器 pause 经常无法获取。k8s docker 环境大家一般使用代理服拉取，再通过 docker tag 的方式解决问题 1 2 docker pull</description>
     </item>
     

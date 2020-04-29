@@ -6,10 +6,19 @@
     <description>Recent content in k8s on ZengXu&#39;s BLOG</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 15 Apr 2020 21:40:48 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 28 Apr 2020 20:32:51 +0800</lastBuildDate>
     
 	<atom:link href="https://www.zeng.dev/tags/k8s/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>如何迁移 Spring Cloud Eureka 注册体系至 k8s</title>
+      <link>https://www.zeng.dev/post/20200428-eureka-multil-cluster-replica/</link>
+      <pubDate>Tue, 28 Apr 2020 20:32:51 +0800</pubDate>
+      
+      <guid>https://www.zeng.dev/post/20200428-eureka-multil-cluster-replica/</guid>
+      <description>优雅处理 eureka 跨集群同步</description>
+    </item>
     
     <item>
       <title>containerd 手动导入镜像</title>

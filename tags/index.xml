@@ -6,10 +6,37 @@
     <description>Recent content in Tags on ZengXu&#39;s BLOG</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 15 Apr 2020 21:40:48 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 28 Apr 2020 20:32:51 +0800</lastBuildDate>
     
 	<atom:link href="https://www.zeng.dev/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>eureka</title>
+      <link>https://www.zeng.dev/tags/eureka/</link>
+      <pubDate>Tue, 28 Apr 2020 20:32:51 +0800</pubDate>
+      
+      <guid>https://www.zeng.dev/tags/eureka/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>k8s</title>
+      <link>https://www.zeng.dev/tags/k8s/</link>
+      <pubDate>Tue, 28 Apr 2020 20:32:51 +0800</pubDate>
+      
+      <guid>https://www.zeng.dev/tags/k8s/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>spring cloud</title>
+      <link>https://www.zeng.dev/tags/spring-cloud/</link>
+      <pubDate>Tue, 28 Apr 2020 20:32:51 +0800</pubDate>
+      
+      <guid>https://www.zeng.dev/tags/spring-cloud/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>containerd</title>
@@ -17,15 +44,6 @@
       <pubDate>Wed, 15 Apr 2020 21:40:48 +0800</pubDate>
       
       <guid>https://www.zeng.dev/tags/containerd/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>k8s</title>
-      <link>https://www.zeng.dev/tags/k8s/</link>
-      <pubDate>Wed, 15 Apr 2020 21:40:48 +0800</pubDate>
-      
-      <guid>https://www.zeng.dev/tags/k8s/</guid>
       <description></description>
     </item>
     

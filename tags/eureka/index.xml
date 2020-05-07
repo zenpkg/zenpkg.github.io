@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>eureka on ZengXu&#39;s BLOG</title>
+    <title>Eureka on ZengXu&#39;s BLOG</title>
     <link>https://www.zeng.dev/tags/eureka/</link>
-    <description>Recent content in eureka on ZengXu&#39;s BLOG</description>
+    <description>Recent content in Eureka on ZengXu&#39;s BLOG</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Tue, 28 Apr 2020 20:32:51 +0800</lastBuildDate>
@@ -17,7 +17,16 @@
       <pubDate>Tue, 28 Apr 2020 20:32:51 +0800</pubDate>
       
       <guid>https://www.zeng.dev/post/20200428-eureka-multil-cluster-replica/</guid>
-      <description>优雅处理 eureka 跨集群同步</description>
+      <description>优雅处理 Eureka 跨集群同步</description>
+    </item>
+    
+    <item>
+      <title>从定时任务理解 Eureka 架构设计</title>
+      <link>https://www.zeng.dev/post/20200429-eureka-schedule-tasks/</link>
+      <pubDate>Sat, 25 Apr 2020 20:40:29 +0800</pubDate>
+      
+      <guid>https://www.zeng.dev/post/20200429-eureka-schedule-tasks/</guid>
+      <description>扒一扒 Eureka 中的定时任务</description>
     </item>
     
   </channel>

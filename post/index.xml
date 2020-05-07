@@ -17,7 +17,16 @@
       <pubDate>Tue, 28 Apr 2020 20:32:51 +0800</pubDate>
       
       <guid>https://www.zeng.dev/post/20200428-eureka-multil-cluster-replica/</guid>
-      <description>优雅处理 eureka 跨集群同步</description>
+      <description>优雅处理 Eureka 跨集群同步</description>
+    </item>
+    
+    <item>
+      <title>从定时任务理解 Eureka 架构设计</title>
+      <link>https://www.zeng.dev/post/20200429-eureka-schedule-tasks/</link>
+      <pubDate>Sat, 25 Apr 2020 20:40:29 +0800</pubDate>
+      
+      <guid>https://www.zeng.dev/post/20200429-eureka-schedule-tasks/</guid>
+      <description>扒一扒 Eureka 中的定时任务</description>
     </item>
     
     <item>
@@ -44,7 +53,7 @@
       <pubDate>Wed, 02 Oct 2019 17:15:27 +0800</pubDate>
       
       <guid>https://www.zeng.dev/post/%E7%A7%8B%E6%97%A5/</guid>
-      <description>主呵，是时候了。夏天盛极一时。 把你的阴影置于日晷上， 让风吹过牧场。 让枝头最后的果实饱满； 再给两天南方的好天气， 催它们成熟，把 最后的甘甜浓酒。</description>
+      <description>夏天盛极一时</description>
     </item>
     
   </channel>

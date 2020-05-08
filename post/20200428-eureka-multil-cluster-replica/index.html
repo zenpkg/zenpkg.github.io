@@ -48,7 +48,7 @@
 <meta itemprop="description" content="优雅处理 Eureka 跨集群同步">
 <meta itemprop="datePublished" content="2020-04-28T20:32:51&#43;08:00" />
 <meta itemprop="dateModified" content="2020-05-07T01:00:00&#43;08:00" />
-<meta itemprop="wordCount" content="2918">
+<meta itemprop="wordCount" content="2915">
 
 
 
@@ -473,7 +473,7 @@ mvn spring-boot:run -Dspring-boot.run.arguments<span class="o">=</span>--spring.
 <p>在上图中，app 信息更新到 ecs-zone 的 eureka-1 中，随之会被复制到 ecs-zone 的 eureka-2 和 k8s-zone 的 eureka-1，但不会被复制到 k8s-zone 的 eureka-2，最终会导致 k8s-zone 中的某个 Eureka 实例缺少大量注册应用。</p>
 <p>同理，其他操作，如续租 (renew), 下线 (cancel) 都是类似的。值得一提的是，Eureka 的设计思想是 AP，所以过期服务淘汰(evict) 并不会同步至其他节点。</p>
 <h2 id="eureka-cluster-in-k8s">Eureka cluster in k8s</h2>
-<p>任意 Eureka 节点均需知道其他节点的地址，切需要通过固定地址维续通信，于是 Eureka 集群在 k8s 中的适宜部署为 StatefuleSet。在 StatefulSet yaml 中，只需要将节点信息替换称固定域名即可，这里省去该部分配置。</p>
+<p>任意 Eureka 节点均需知道其他节点的地址，并通过固定地址维续通信，于是 Eureka 集群在 k8s 中的适宜部署为 StatefuleSet。在 StatefulSet yaml 中，只需要将固定 IP 替换称固定域名即可，这里省去该部分配置。</p>
 <p>值得注意的是，这里使用了多个 Service 暴露底层的 Eureka 实例，原因都写在注释中，StatefulSet 需要根据 Service 声明生成节点域名，如果 StatefulSet 名为 eureka，那么节点固定域名就是 eureka-0.eureka-svc, eureka-1.eureka-svc,&hellip;, eureka-n.eureka-svc。</p>
 <p>上文提到，Eureka 节点之间的信息同步不能统一域名负载，因此不能简单在 eureka-svc 上层放一个 Ingress 暴露给 ECS Eureka 注册，而是需要通过单独的 Service 逐个挑选 Eureka 实例（结合 StatefulSet label)，再通过 NodePort 或者 Ingress 逐个暴露。</p>
 <div class="highlight"><div class="chroma">

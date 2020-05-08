@@ -48,7 +48,7 @@
 <meta itemprop="description" content="优雅处理 Eureka 跨集群同步">
 <meta itemprop="datePublished" content="2020-04-28T20:32:51&#43;08:00" />
 <meta itemprop="dateModified" content="2020-05-07T01:00:00&#43;08:00" />
-<meta itemprop="wordCount" content="3028">
+<meta itemprop="wordCount" content="2918">
 
 
 
@@ -144,24 +144,21 @@
 </div>
     <div class="post-content">
       <h2 id="heading">背景</h2>
-<p>最近负责着手把公司跑在阿里云 ECS 上的 Spring Cloud 微服务迁移到 k8s，为保证平滑顺畅，仍需 k8s 中保留 Eureka 体系，直到所有服务都跑在 k8s 后，才会着手考虑去 Eureka。根据迁移情况，云主机会处于如下两个阶段:</p>
+<p>最近负责着手把公司跑在阿里云 ECS 上的 Spring Cloud 微服务迁移到 k8s，为保证平滑顺畅，仍需 k8s 中保留 Eureka 体系，直到所有服务都跑在 k8s 后，才会着手考虑去 Eureka。</p>
+<p>实施过程可初略分为试水和全面推广两个阶段：</p>
 <ol>
-<li>阶段一，部分主机受 k8s 管理，部分不受 k8s 管理。默认情况下，k8s 网络到 ECS 网络为单向畅通，不受管理部分的 ECS 无法通过 ip 直接访问 k8s Pod 网段和Service 网段。</li>
-<li>阶段二，所有主机均受 k8s 管理，k8s 网络到 ECS 网络双通。</li>
+<li>试水阶段，迁移一些独立的周边服务到 k8s 观察运行情况。选择一部分机器作为 Worker Node 受 k8s 管理，余下部分则不受 k8s 管理。默认情况下，k8s Pod 网络到 ECS 网络为单向畅通，不受管理部分的 ECS 无法通过 ip 直接访问 k8s Pod 网段。</li>
+<li>全面推广阶段，所有主机均受 k8s 管理，k8s 网络到 ECS 网络双通。</li>
 </ol>
-<p>该如何处理 k8s 服务实例与 ECS 服务实例互通互调，有如下方案：</p>
-<ol>
-<li>迁移到 k8s 的服务实例仍旧注册到 ECS Eureka 集群，对于不受 k8s 管理的实例，采用手工配置 ip table 的方式，保证不受管理部分的 ECS 可以通过 ip 直接访问 k8s Pod 网段和Service 网段；这种方案可以使用到全部迁移完成</li>
-<li>在 k8s 中新部署 Eureka 集群，迁移到 k8s 的实例通过切换配置注册到 k8s Eureka 集群；阶段一，将 ECS Eureka 集群单向注册到 k8s Eureka 集群，保证 k8s 实例可以访问 ECS 实例即可(容忍 ECS 实例不能访问 k8s 实例)；阶段二，ECS Eureka 集群与 k8s Eureka 集群双向注册，直到迁移完成。</li>
-</ol>
-<p>注: 如果迁移开始前即可保证所有 ECS 均可成为 Worker 节点 K8S 管理，则自由选择持续使用外部 Eureka 集群或者一致维持 ECS Eureka 集群与 k8s Eureka 集群双向注册即可。</p>
-<p>方案 1 的好处是简单轻松，坏处是需要手工配置 ip table，比较适合 ECS 节点不多的情况。方案 2 的好处是不用手动配置网络，坏处是阶段一区域网络不通。</p>
-<p>结合具体情况，我选择了方案 2，对于网络不通的情况，迁移时可先选择较为独立的周边服务，等这部分迁移完，差不多所有节点也能纳入 k8s 管理了。</p>
+<p>针对试水阶段网络单通的情况，可在 k8s 中独立部署一套 Eureka 集群，并将 ECS Eureka 集群单向注册到 k8s Eureka 集群，保证 k8s 实例可以访问 ECS 实例即可。因为试水阶段我们只选择独立的周边服务部署，因此可以容忍 ECS 实例不能访问 k8s 实例。</p>
 <img src="/img/2020-04/migrate-simple-schema.jpg" width="700px">
 <div class='align-center'>
 <p>概要图，省略服务层级和 k8s  Service、Pod 等细节</p>
 </div>
-<p>下文接着讲述 ECS 集群单向注册 k8s 集群的配置设计以及如何解决遇到问题。</p>
+<p>完成试水后，可以将所有 ECS 节点作为 Worker Node 纳入 k8s 管理范围，这时 ECS 网络和 k8s Pod 网络互通，可将 Eureka 切换为双向注册。所有迁移完成之后，下线原 ECS Eureka 集群即可。</p>
+<p>双 Eureka 集群的方式不仅可保证迁移平滑，也可实现试水期两边应用的相对隔离。</p>
+<p>PS：高端爱折腾的同学可以采用手工或脚本配置 ip table 的方式，保证不受管理部分的 ECS 可以通过 ip 直接访问 k8s Pod 网段。这种方案很早就能开启双向注册，可与全面推广阶段无缝衔接。</p>
+<p>下文通过示例讲述 ECS 集群单向注册 k8s 集群的配置设计以及如何解决可能遇到问题。</p>
 <h1 id="eureka-">Eureka 配置设计</h1>
 <p>首先在 /etc/hosts 文件增加如下 DNS 解析规则</p>
 <div class="highlight"><div class="chroma">
@@ -353,7 +350,7 @@ mvn spring-boot:run -Dspring-boot.run.arguments<span class="o">=</span>--spring.
 <div class='align-center'>
 <p>ecs-peer1:8763 注册信息</p>
 </div>
-<p>如进入阶段二，打算切为双向注册，类似地，只需将 k8s Eureka 实例配置改为如下即可</p>
+<p>如进入全面推广阶段，打算切为双向注册，类似地，只需将 k8s Eureka 实例配置改为如下即可</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt"> 1
@@ -612,7 +609,7 @@ mvn spring-boot:run -Dspring-boot.run.arguments<span class="o">=</span>--spring.
       <nav class="post-nav">
         
         <a class="next" href="/post/20200425-eureka-schedule-tasks/">
-            <span class="next-text nav-default">从定时任务理解 Eureka 架构设计</span>
+            <span class="next-text nav-default">从定时任务分析 Eureka 架构设计</span>
             <span class="next-text nav-mobile">Next</span>
             <i class="iconfont icon-right"></i>
           </a>

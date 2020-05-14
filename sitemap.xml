@@ -107,6 +107,27 @@
   </url>
   
   <url>
+    <loc>https://www.zeng.dev/tags/go/</loc>
+    <lastmod>2019-05-09T00:50:10+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.zeng.dev/tags/regex/</loc>
+    <lastmod>2019-05-09T00:50:10+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.zeng.dev/post/2019-regex-group/</loc>
+    <lastmod>2019-05-09T00:50:10+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://www.zeng.dev/about/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
